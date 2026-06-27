@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | SMIT First App</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #070b1f;
+            color: #f4f7ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, rgba(81, 92, 255, 0.25), transparent 28%),
+                radial-gradient(circle at 70% 10%, rgba(0, 255, 222, 0.14), transparent 20%),
+                radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.08), transparent 18%),
+                #070b1f;
+        }
+
+        .page {
+            display: grid;
+            min-height: 100vh;
+            grid-template-rows: auto 1fr auto;
+            gap: 32px;
+            padding: 48px 24px;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            font-size: 1.05rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #80b8ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            color: #bbc6ff;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 180ms ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 40px 0;
+            max-width: 1050px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5vw, 4.6rem);
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+            max-width: 900px;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 740px;
+            color: #d9e0ff;
+        }
+
+        .hero .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 28px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #6f8cff 0%, #38d9ff 100%);
+            color: #061023;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+
+        .hero .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(56, 217, 255, 0.25);
+        }
+
+        .hero .mini-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .mini-card strong {
+            color: #ffffff;
+            display: block;
+            font-size: 0.98rem;
+        }
+
+        .mini-card span {
+            color: #aab4ff;
+            font-size: 0.92rem;
+        }
+
+        .features {
+            display: grid;
+            gap: 18px;
+            padding: 28px 0 0;
+            width: min(100%, 920px);
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            display: grid;
+            gap: 10px;
+            padding: 20px 24px;
+            border-radius: 24px;
+            background: rgba(12, 17, 39, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+        }
+
+        .feature-card h3 {
+            font-size: 1.05rem;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #b8c2ff;
+            line-height: 1.7;
+        }
+
+        .accent {
+            color: #66d9ff;
+        }
+
+        .footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #8b95c8;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 720px) {
+            .topbar {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .hero {
+                padding-top: 16px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <div class="brand">SMIT</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <div class="mini-card">
+                <div>
+                    <strong>Launch your first app</strong>
+                    <span>Fast, polished, and ready for your next idea.</span>
+                </div>
+            </div>
+
+            <div>
+                <h1>Beautiful Django landing page built for your first web experience.</h1>
+                <p>Modern styling, crisp typography, and a welcoming layout designed to turn visitors into users. Start here with a landing page that looks great on every device.</p>
+            </div>
+
+            <a class="cta" href="#features">Explore the design</a>
+
+            <section class="features" id="features">
+                <article class="feature-card">
+                    <h3>Responsive hero section</h3>
+                    <p>Clean presentation with adaptive typography, smooth spacing, and a polished dark theme that stands out on desktop and mobile.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Fast setup</h3>
+                    <p>Ready to use in your Django project with a single view and template. No extra static assets required.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Built for impact</h3>
+                    <p>Clear calls to action, elegant visual hierarchy, and a professional aesthetic that makes your project feel premium from the first visit.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer" id="contact">
+            Crafted for your Django landing page. Visit the admin to continue building: <strong>/admin/</strong>
+        </footer>
+    </div>
+</body>
+</html>
