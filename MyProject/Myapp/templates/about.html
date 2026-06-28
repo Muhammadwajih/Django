@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | SMIT First App</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background-color: #07111f;
+        color: #f4f7ff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #07111f 0%, #10213f 100%);
+        color: #f4f7ff;
+      }
+
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 48px 24px 64px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .brand {
+        font-size: 1rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #80b8ff;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        color: #cdd7ff;
+        text-decoration: none;
+      }
+
+      .nav-links a:hover {
+        color: #ffffff;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
+
+      .card h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+
+      .card p {
+        line-height: 1.8;
+        color: #dce4ff;
+        margin-bottom: 14px;
+      }
+
+      .highlight {
+        color: #66d9ff;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">SMIT</div>
+        <nav class="nav-links">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+        </nav>
+      </header>
+
+      <section class="card">
+        <h1>About This Project</h1>
+        <p>
+          This is a simple Django web application created as part of a learning
+          project. It demonstrates how to build a basic landing page and an
+          additional About page using Django views and templates.
+        </p>
+        <p>
+          The goal of this project is to help you understand the basics of
+          routing, templating, and organizing a Django app in a clean structure.
+        </p>
+        <p class="highlight">
+          You can now visit the About page at /about/ and return home anytime.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
